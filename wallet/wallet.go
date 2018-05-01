@@ -693,6 +693,7 @@ func (w *Wallet) recoverScopedAddresses(
 	}
 
 	log.Infof("Scanning %d blocks for recoverable addresses", len(batch))
+	log.Infof("hi")
 
 expandHorizons:
 	for scope, scopedMgr := range scopedMgrs {
