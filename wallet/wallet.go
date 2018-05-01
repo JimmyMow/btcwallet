@@ -688,6 +688,7 @@ func (w *Wallet) recoverScopedAddresses(
 
 	// If there are no blocks in the batch, we are done.
 	if len(batch) == 0 {
+		log.Infof("no blocks left in batch")
 		return nil
 	}
 
