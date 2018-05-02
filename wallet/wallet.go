@@ -494,8 +494,9 @@ func (w *Wallet) syncWithChain() error {
 			// blocks that have been added to the recovery manager's
 			// block batch thus far. If block batch is empty, this
 			// will be a NOP.
+			log.Infof("STARTING RECOVERY. Batch size: %d", height%recoveryBatchSize == 0)
 			if isRecovery && height%recoveryBatchSize == 0 {
-				log.Infof("STARTING RECOVERY. Batch size: %d", recoveryBatchSize)
+				log.Infof("yo yo yo")
 				err := w.recoverDefaultScopes(
 					chainClient, tx, ns,
 					recoveryMgr.BlockBatch(),
